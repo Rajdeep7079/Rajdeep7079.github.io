@@ -73,10 +73,13 @@ box-sizing: border-box;
     letter-spacing:normal;
    
 }
-.nav-contents>p:hover{
+.nav-contents a:hover{
 
 color: crimson;
 text-transform: capitalize;
+border : 1px crimson solid;
+box-sizing: border-box;
+border-radius:10px
 }
 
 #about{
@@ -145,7 +148,7 @@ margin-top: 100px;
     text-align: center;
     color: white;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 #skills img{
     height: 100%;
@@ -161,25 +164,49 @@ transform: scale(1.1);
     margin: auto;
     height: 700px;
     width: 90%;
-    border: 1px solid;
+   
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-columns: repeat(2,1fr);
    
 }
+a{
+    text-decoration: none;
+    color:white
+}
 #projects>div{
 margin: auto;
-    height: 250px;
+    height: 200px;
     width: 70%;
     gap: 10px;
-    border: 1px solid;
-    margin-top: 30px;
+   
+   
+
 
 }
+/* #projects>div:hover{
+
+} */
+
+#tech-stacks{
+  margin: auto;
+  width: 130px;
+  height: 30px;
+
+  margin-bottom: 10px;
+  display: flex;
+
+justify-content: space-around;}
+#tech-stacks>img{
+  height: 100%;
+  width: 30%;
+}
+
 #projects>div img{
 height: 100%;
 width: 100%;
 border-radius: 10px;
+
     }
     #projects>div p{
 font-size: 10px;
@@ -195,11 +222,15 @@ color: white;
 cursor: pointer;
 display: inline;
 margin: auto;
-
+border:none;
 font-weight: bold;
 border-radius: 10px;
 width: 80px;
-height: 30px;
+height: 20px;
 margin-bottom: 90px;
 
     }
+    #projects>div button:hover{
+background-color: green;
+    }
+

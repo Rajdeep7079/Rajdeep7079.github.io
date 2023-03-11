@@ -39,3 +39,10 @@ const loop = () => {
   }, 80);
 }
 loop();
+
+
+//////////////////////////////////
+
+figma=()=>{
+  window.location.href="https://cheery-flan-ef9b62.netlify.app"
+}
