@@ -46,3 +46,14 @@ loop();
 figma=()=>{
   window.location.href="https://cheery-flan-ef9b62.netlify.app"
 }
+
+crono=()=>{
+  window.location.href="https://radiant-muffin-05b02a.netlify.app"
+}
+
+myglam=()=>{
+  window.location.href=""
+}
+fitmeals=()=>{
+  window.location.href=""
+}

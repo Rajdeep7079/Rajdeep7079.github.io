@@ -11,6 +11,7 @@
   background-color: rgb(2, 2, 28)5, 5, 42;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
+  bottom: 100px;
   width: 100%; /* Full width */
 }
 
@@ -81,7 +82,19 @@ border : 1px crimson solid;
 box-sizing: border-box;
 border-radius:10px
 }
-
+#RESUME{
+  margin-top: 50px;
+ width: 130px;
+ border: none;
+ letter-spacing: 1.8px;
+ /* margin-bottom: 50px; */
+ cursor: pointer;
+ font-weight: bold;
+ border-radius: 10px;
+ color: white;
+ background-color: crimson;
+ height: 40px; 
+}
 #about{
     width: 90%;
     height: 300px;
@@ -130,6 +143,28 @@ margin-top: 100px;
    
     height: 200px;
 }
+.typing h1{
+  overflow: hidden;
+  border-right: .15em solid crimson;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15 em;
+  animation: typing 3.5s steps(40,end),
+  blink-caret .75s step-end infinite
+
+}
+@keyframes typing {
+  from {width: 0;}
+  to{width: 100%;}
+  
+}
+@keyframes blink-caret {
+from,to {border-color : transparent}
+50% {
+  border-color:crimson;
+}  
+}
+
 #skills{
     display: grid;
     margin: auto;
@@ -162,9 +197,9 @@ transform: scale(1.1);
 
 #projects{
     margin: auto;
-    height: 700px;
+    height: 600px;
     width: 90%;
-   
+   margin-top: -100px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-columns: repeat(2,1fr);
@@ -175,15 +210,18 @@ a{
     color:white
 }
 #projects>div{
+  
 margin: auto;
     height: 200px;
     width: 70%;
     gap: 10px;
    
-   
-
 
 }
+#projects>div+p{
+font-weight: bold;
+}
+
 /* #projects>div:hover{
 
 } */
@@ -211,6 +249,7 @@ border-radius: 10px;
     #projects>div p{
 font-size: 10px;
 font-weight: 100;
+line-height: 15px;
 letter-spacing: 1px;
 color: white;
 text-align: center;
@@ -233,4 +272,49 @@ margin-bottom: 90px;
     #projects>div button:hover{
 background-color: green;
     }
+.btn
+{
+/* border: 1px solid; */
+display: block;
+padding: 0px 90px;
+  margin: auto;
+}
 
+
+    #contact{
+
+      height: auto;
+      width: 50%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid white;
+      margin-top: 100px;
+      border: 10px solid white;
+      padding: 10px 10px;
+      border-radius:20px ;
+      gap: 10px;
+    }
+     #contact>div{
+
+      height: 80px;
+      width: 70%;
+      /* border:  1px solid; */
+      margin: auto;
+      box-sizing: border-box;
+      /* text-align: center; */
+/* justify-content: center; */
+      align-items: center
+      ;
+
+     }
+      #contact>div>img{
+        height: 70px;
+        width: 70px;
+        box-sizing: border-box;
+      }
+
+
+      @media screen {
+        
+      }
