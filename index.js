@@ -57,3 +57,22 @@ myglam=()=>{
 fitmeals=()=>{
   window.location.href=""
 }
+
+// github
+
+function crogit(){
+  window.open("https://github.com/RationalPrabal/CronoFit")
+}
+function fitgit(){
+  window.open("https://github.com/sauravsamui/Fitmeal-clone")
+}
+function myglamgit(){
+  window.open("https://github.com/Rajdeep7079/energized-fruit-4440")
+}
+function figmagit(){
+  window.open("https://github.com/Rajdeep7079/figma")
+}
+
+function resume(){
+  window.open("https://drive.google.com/file/d/1xq_k1XF1psjgAUGUJOTQKLrA1cdVqJ4D/view?usp=share_link")
+}
