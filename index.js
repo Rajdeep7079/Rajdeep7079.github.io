@@ -1,78 +1,129 @@
-const target = document.getElementById("target");
-let array = ["A technical Support Engineer"];
-let wordIndex = 0;
-let letterIndex = 0;
+let navbar = document.getElementById("navbar");
+window.onscroll = function(){
+    if(window.scrollY>20){
+        navbar.classList.add("scrolled");
 
-const createLetter = () => {
-  const letter = document.createElement("span");
-  target.appendChild(letter);
-
-  letter.classList.add("letter");
-  letter.style.opacity = '0';
-  letter.style.animation = "anim 5s ease forwards";
-  letter.textContent = array[wordIndex][letterIndex];
-
-  setTimeout(() => {
-    letter.remove();
-  }, 2000);
-};
-
-const loop = () => {
-  setTimeout(() => {
-    if (wordIndex >= array.length) {
-      wordIndex = 0;
-      letterIndex = 0;
-      loop();
-      
-    } else if (letterIndex < array[wordIndex].length) {
-      createLetter();
-      letterIndex++;
-      loop();
-      
-    } else {
-      letterIndex = 0;
-      wordIndex++;
-      setTimeout(() => {
-        loop();
-      }, 2000);
+    } else{
+        navbar.classList.remove("scrolled");
     }
-  }, 80);
 }
-loop();
+document.getElementById("git1Button").addEventListener("click",function(){
+    window.open("https://github.com/RationalPrabal/CronoFit", "_blank");
+})
+document.getElementById("deploy1Button").addEventListener("click",function(){
+    window.open("https://radiant-muffin-05b02a.netlify.app", "_blank");
+})
+
+document.getElementById("git2Button").addEventListener("click",function(){
+    window.open("https://github.com/sauravsamui/Fitmeal-clone", "_blank");
+})
+document.getElementById("deploy2Button").addEventListener("click",function(){
+    window.open("https://grand-longma-97f1d2.netlify.app/", "_blank");
+})
+
+document.getElementById("git3Button").addEventListener("click",function(){
+    window.open("https://github.com/Rajdeep7079/figma", "_blank");
+})
+document.getElementById("deploy3Button").addEventListener("click",function(){
+    window.open("https://cheery-flan-ef9b62.netlify.app/", "_blank");
+})
 
 
-//////////////////////////////////
+// function cronoFit(){
+//   window.open=("https://github.com/RationalPrabal/CronoFit", "_blank")
+// }
 
-figma=()=>{
-  window.location.href="https://cheery-flan-ef9b62.netlify.app"
+
+document.getElementById("linkedin").addEventListener("click",function(){
+    window.open("https://www.linkedin.com/in/rajdeep-kumar-0217241ba/");
+})
+
+document.getElementById("github").addEventListener("click",function(){
+    window.open("https://github.com/Rajdeep7079/");
+})
+
+
+
+let nav_icon = document.querySelector('.nav_icon');
+let line = document.querySelector('.line');
+let nav_menu = document.querySelector('.nav_menu');
+let nav_links = document.querySelectorAll('.nav_list');
+let nav_length = nav_links.length;
+nav_icon.addEventListener('click', () => {
+  line.classList.toggle('active');
+  nav_menu.classList.toggle('active');
+  nav_links.forEach((link, index) => {
+    if (link.style.animation) {
+      link.style.animation = '';
+    } else {
+      link.style.animation = `linkFadeIn 0.5s ease forwards ${
+        index / nav_length + 0.2
+      }s`;
+    }
+  });
+});
+let header = document.querySelector('.header');
+let hero = document.querySelector('.hero');
+let header_height = header.getBoundingClientRect().height;
+
+let sticky = (entries) => {
+  let [entry] = entries;
+  if (!entry.isIntersecting) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+};
+let hero_observer = new IntersectionObserver(sticky, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${header_height}px`,
+});
+hero_observer.observe(hero);
+
+
+
+
+const sectionAll = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', ()=>{
+    const scrollY = window.pageYOffset;
+    sectionAll.forEach((current)=>{
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 200;
+        const sectionId = current.getAttribute('id');
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('li  a[href*="'+ sectionId + '"]').classList.add('active');
+        } else{
+            document.querySelector('li  a[href*="'+ sectionId + '"]').classList.remove('active');
+        }
+    });
+});
+
+
+
+function myfunc(){
+    
+    let sr = document.getElementById("check").checked;
+
+    if(sr){
+        document.getElementById("navMenu").style.right = "-110%";
+        document.getElementById("check").checked = false;
+    } else{
+        document.getElementById("navMenu").style.right = "0%";
+    }
 }
 
-crono=()=>{
-  window.location.href="https://radiant-muffin-05b02a.netlify.app"
+function mycheck(){
+    let sr = document.getElementById("check").checked;
+
+    if(sr){
+        document.getElementById("navMenu").style.right = "0%";
+    } else{
+        document.getElementById("navMenu").style.right = "-110%";
+    }
 }
 
-myglam=()=>{
-  window.location.href=""
-}
-fitmeals=()=>{
-  window.location.href=""
-}
-
-// github
-
-function crogit(){
-  window.open("https://github.com/RationalPrabal/CronoFit")
-}
-function fitgit(){
-  window.open("https://github.com/sauravsamui/Fitmeal-clone")
-}
-function myglamgit(){
-  window.open("https://github.com/Rajdeep7079/energized-fruit-4440")
-}
-function figmagit(){
-  window.open("https://github.com/Rajdeep7079/figma")
-}
-
-function resume(){
-  window.open("https://drive.google.com/file/d/1xq_k1XF1psjgAUGUJOTQKLrA1cdVqJ4D/view?usp=share_link")
-}
+function resumeDownload(){
+   
+        window.open("https://drive.google.com/file/d/1xq_k1XF1psjgAUGUJOTQKLrA1cdVqJ4D/view?usp=share_link","_blank");
+      }

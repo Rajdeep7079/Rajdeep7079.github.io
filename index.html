@@ -1,281 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rajdeep's Portfolio</title>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans&family=Montserrat:wght@500;600;800&family=Raleway:wght@200;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f426985a11.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("wI7hDI-fRxLu8krW-");
+        })();
+    </script>  
+    <script
+        src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar.css" />
 </head>
-
 <body>
-
-    <div id="navbar">
-        <div>
-            <p>Rajdeep <span style="color:crimson">Portfolio</span> </p>
-
-        </div>
-        <div class="nav-contents">
-            <a href="">
-                <p>HOME</p>
-            </a>
-            <a href="#about-me">
-                <p>ABOUT ME</p>
-            </a>
-            <a href="#tech-skills">
-                <p>SKILLS</p>
-            </a>
-            <a href="#pro">
-                <p>PROJECTS</p>
-            </a>
-            <a style="border: 1px solid crimson
-       ;padding: 0px 20px;border-radius: 20px;"
-                href="https://drive.google.com/file/d/1xq_k1XF1psjgAUGUJOTQKLrA1cdVqJ4D/view?usp=share_link" download
-                target="_blank">
-                <p>RESUME</p>
-            </a>
-        </div>
-
-    </div>
-
-
-    <!-- about me -->
-
-    <div id="about">
-        <div>
-            <h1 style="color: whit3;font-size: 42px;">Hello I'M <span style="color: crimson;">Rajdeep kumar</span></h1>
-            <br>
-
-            <div class="typing">
-                <h1 style="font-size: 30px;">* Technical Support Engineer </h1>
+    <!-- Navbar -->
+    <section class="hero">
+        <header class="header">
+            <nav id="navbar">
+                <div id="logo">
+                    <!-- <img src="./images/logo_portfolio.png" alt=""> -->
+                </div>
+                <input type="checkbox" id="check" onclick="mycheck()">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <div class="nav_icon">
+                    <div class="line"></div>
+                </div>
+                <div class="container">
+                    <ul class="nav_menu" id="navMenu">
+                        <li class="nav_list" onclick="myfunc()"><a href="#home" class="nav_link home active">HOME</a></li>
+                        <li class="nav_list" onclick="myfunc()"><a href="#aboutme" class="nav_link">ABOUT ME</a></li>
+                        <!-- <li class="nav_list" onclick="myfunc()"><a href="#education" class="nav_link">EDUCATION</a></li> -->
+                        <li class="nav_list" onclick="myfunc()"><a href="#skills" class="nav_link">SKILLS</a></li>
+                        <li class="nav_list" onclick="myfunc()"><a href="#projects" class="nav_link">PROJECTS</a></li>
+                        <li class="nav_list" onclick="myfunc()"><a href="#contact" class="nav_link">CONTACT</a></li>
+                        <li><a onclick="resumeDownload()" id="6" href="Rajdeep_kumar_fw21_1284 (2).pdf" target="_blank" download="Rajdeep_kumar_fw21_1284 (2).pdf">RESUME</a></li>
+                    </ul>
+                </div>
+               
+            </nav>
+        </header>
+    </section>
+    <!-- Home -->
+    <section id="home">
+        <div id="intro">
+            <h1>Hello World <i class="fa-solid fa-hand-wave"></i></h1> 
+            <p> I'm <span>Rajdeep Kumar</span></p>
+            <div class="wrapper">
+                <!-- <div class="static-txt">I'm a</div> -->
+                <ul class="dynamic-txt">
+                    <li><span>Technical Support Engineer    !</span></li>
+                </ul>
             </div>
-            <button id="RESUME" onclick="resume()">RESUME</button>
         </div>
-        <div>\
-
-            <img style="display: block;margin: auto;border-radius: 10px;" height="170px" width="260px"
-            src="https://camo.githubusercontent.com/40165a147c3dcea0fa1db780bb533fc5f98546ccfb9d5d05ddb2f429277f5348/68747470733a2f2f616e616c7974696373696e6469616d61672e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031382f31322f646576656c6f7065722d6472696262626c652e676966"
-            alt="">
-
+        <div id="img">
+            <img style="height:200px;width: 340px;margin-left: -100px;" src="https://thumbs.gfycat.com/BetterFalseKid-max-1mb.gif"alt="">
         </div>
-    </div>
-
-
-    <h1 id="about-me" style="background-color:#131a28;color: white;margin-top: 250px;" class="aboutme">ABOUT ME</h1>
-    <img style="border-radius: 20PX 
-    ;border-radius: 10px solid white;display: block;margin:auto;" height="200px" width="200px"
-            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAjG_xNpA9OYmtQLdEBbgCnvrq5LdERSLQC_XzP4ec-w3YDWoZ9TdwbPXgTr8uJ1ZA97HxuHXVJqwkOsJh73ibt_nXrtGezGNtGvFruRQc4JNhUVsKhwBLJUT2hUivv4cSKIEUEyfTXaUDuVRFdf68JuwKhS6KgxSTSK7TLhVAGM9eYRjzHsE8_REb/s320/IMG_20230307_144037__1_-removebg-preview%20(1).png"
-            alt="">
-
-    <div id="about">
+    </section>
+    
+    <!-- About Section -->
+    <section id="aboutme">
+        <h1>About Me</h1>
+        <div>
+            <div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAjG_xNpA9OYmtQLdEBbgCnvrq5LdERSLQC_XzP4ec-w3YDWoZ9TdwbPXgTr8uJ1ZA97HxuHXVJqwkOsJh73ibt_nXrtGezGNtGvFruRQc4JNhUVsKhwBLJUT2hUivv4cSKIEUEyfTXaUDuVRFdf68JuwKhS6KgxSTSK7TLhVAGM9eYRjzHsE8_REb/s320/IMG_20230307_144037__1_-removebg-preview%20(1).png"alt="profile pic">
+            </div>
+            <div>
+                <div>
+                    <h2>I'm Rajdeep Kumar</h2>
+                    <p> Customer-oriented and self-driven Technical Support Engineer adept at maintaining and managing IT inventory, providing professional technical support 
+                        to colleagues and clients,  Offers excellent technological expertise, analytical and problem solving skills with team work abilities.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
         
+        <a id="downloadResume" href="Rajdeep_kumar_fw21_1284 (2).pdf" target="_blank"   download>Download Resume</a>
       
-        <P style="text-align: 
-    center;line-height:30px;width: 70%;margin: auto;">Customer-oriented and self-driven Technical Support Engineer
-            adept at maintaining and managing IT inventory, providing professional technical support to colleagues and
-            clients, Offers excellent technological expertise, analytical and problem solving skills with team work
-            abilities.</P>
-    </div>
 
+        <!-- skills -->
 
-    <!-- skills -->
-    <H1 id="tech-skills" style="color: white;text-align: center;margin-bottom: 50px;background-color:  #131a28">
-        TECHNICAL SKILLS</H1>
+    </section>
 
-    <div id="skills">
-
+    
+    <section id="skills">
+        <h1> Technical Skills</h1>
         <div>
-            <img src="https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Html-512.png" alt="">
-            <p>HTML</p>
-        </div>
-        <div>
-            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_960_720.png" alt="">
-            <p>CSS</p>
-        </div>
-        <div>
-            <img src="https://gitlab.schukai.com/uploads/-/system/group/avatar/139/javascript.png" alt="">
-            <p>JAVASCRIPT</p>
-        </div>
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/518/518713.png" alt="">
-            <p>LINUX</p>
-        </div>
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/4315/4315005.png" alt="">
-            <p>SQL</p>
-        </div>
-        <div>
-            <img src="https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png"
-                alt="">
-            <p>REVEAL JS</p>
-        </div>
-        <div>
-            <img src="https://img.freepik.com/free-icon/repair-tools_318-503493.jpg?size=338&ext=jpg&ga=GA1.2.238311641.1678469731&semt=ais"
-                alt="">
-            <p>TROUBLESHOOTING</p>
-
-        </div>
-        <div>
-            <img src="https://img.freepik.com/free-icon/bug_318-466843.jpg?size=338&ext=jpg&ga=GA1.1.238311641.1678469731&semt=ais"
-                alt="">
-            <P>DEBUGGING</P>
-
-
-
-
-
-
-        </div>
-    </div>
-    <!-- softskills -->
-
-    <H1 style="color: white;text-align: center;margin-bottom: 50px;margin-top: 100px;background-color:  #131a28;">SOFT
-        SKILLS</H1>
-
-    <div id="skills">
-
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/4825/4825697.png" alt="">
-            <p>TEAM WORK</p>
-        </div>
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/3628/3628005.png" alt="">
-            <p>ACTIVE LISTENER</p>
-        </div>
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/1457/1457348.png" alt="">
-            <p>PROBLEM SOLVER</p>
-        </div>
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/128/9360/9360620.png" alt="">
-            <p>CREATIVE THINKING</p>
-        </div>
-
-
-    </div>
-    <!-- project -->
-    <H1 id="pro"
-        style="color: white;text-align: center;margin-bottom: 20px;margin-top: 50px;background-color:  #131a28;">
-        PROJECTS</H1>
-
-
-    <div id="projects">
-        <div>
-            <p>CRONOMETER</p>
-            <img src="https://www.siteprice.org/SiteThumbs/c/cronometer.com.webp" alt="">
-
-            <p>Cronometer is a powerful health and fitness app that makes it easy to track your diet and exercise
-                habits. With an extensive database of over 1.2 million verified foods, you can easily log your meals and
-                get a detailed breakdown of the calories, macros & micronutrients you're consuming</p>
-            <div id="tech-stacks">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="">
-                <img src="https://cdn-icons-png.flaticon.com/512/1199/1199124.png" alt="">
-            </div>
-
-
-            <div class="btn" style="margin: auto;"> <button style="margin-bottom: 100px;"
-                    onclick="crogit()">Github</button> <button onclick="crono()">Live</button></div>
-
-        </div>
-        <div>
-            <p>FIT-MEALS</p>
-
-            <img src="https://www.membroz.com/wp-content/uploads/2020/03/thumb_FitMeal-home-540x640.jpg" alt="">
-            <p>Reach your weight, health and workout goals with deliciously healthy food. We have various diet plans
-                customised to suit your specific health and weight .The Fitmeals culinary team consists of very
-                passionate and skilled chefs. Our team is well versed in nutrition and all our menus and plans </p>
-            <div id="tech-stacks">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="">
-                <img src="https://cdn-icons-png.flaticon.com/512/1199/1199124.png" alt="">
-            </div>
-            <div class="btn" style="margin: auto;"> <button style="margin-bottom: 100px;"
-                    onclick="fitgit()">Github</button> <button onclick="figma()">Live</button></div>
-        </div>
-
-
-
-    </div>
-
-    <div id="projects">
-        <div>
-            <p>MYGLAMM</p>
-
-            <img src="https://techcrunch.com/wp-content/uploads/2021/07/myglamm-website.jpg" alt="">
-            <p>Buy international beauty products & cosmetic makeup items on MyGlamm, the online beauty shopping store.
-                Shop Manish Malhotra beauty products & more for lips .Find lipsticks, eyeshadows, eyeliners, blushes &
-                more. Elevate your makeup game with MyGlamm </p>
-            <div id="tech-stacks">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="">
-                <img src="https://cdn-icons-png.flaticon.com/512/1199/1199124.png" alt="">
-            </div>
-            <div class="btn"> <button style="margin-bottom: 100px;" onclick="myglamgit()">Github</button> <button
-                    onclick="figma()">Live</button></div>
-        </div>
-        <div>
-            <P>FIGMA</P>
-            <img src="https://cdn.sanity.io/images/599r6htc/localized/af419bc84e82edd0633601935c72120327ca17c1-2120x1000.gif?w=1060&h=500&q=75&fit=max&auto=format"
-                alt="">
-            <p>Figma is a free design tool for teams who build products together. Born on the Web, Figma helps the
-                entire product team create, test, and ship better designs, .Figma is a collaborative web application for
-                interface design, with additional offline features enabled by desktop applications for macOS and Windows
-            </p>
-            <div id="tech-stacks">
-                <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="">
-                <img src="https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png"
-                    alt="">
-            </div>
-            <div class="btn" style="margin: auto;"> <a href="index.html"><button style="margin-bottom: 100px;"
-                        onclick="figmagit()">Github</button></a> <button onclick="figma()">Live</button></div>
-        </div>
-    </div>
-
-
-    <!-- education -->
-    <H1 id="pro"
-        style="color: white;text-align: center;margin-bottom: 20px;margin-top: 200px;background-color:  #131a28;">
-        CONTACT ME</H1>
-
-    <div id="contact">
-        <div>
-
-            <img src="https://cdn-icons-png.flaticon.com/512/3616/3616215.png" alt="">
             <div>
-                <a href="">+91 7079913485</a>
-
+                <img src="https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Html-512.png" alt="">
+                <h2>HTML</h2>
             </div>
-        </div>
-
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/3617/3617161.png" alt="">
-
-            <div> <a type="mailto" href="sunnysahu930496@gmail.com" target="_blank">sunnysahu930496@gmail.com</a>
-            </div>
-        </div>
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/185/185964.png" alt="">
-
             <div>
-                <a href="https://www.linkedin.com/in/rajdeep-kumar-0217241ba" target="_blank">Linkdn / Rajdeep kumar</a>
-
+                <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_960_720.png" alt="">
+                <h2>CSS</h3>
             </div>
+            <div>
+                <img src="https://gitlab.schukai.com/uploads/-/system/group/avatar/139/javascript.png" alt="">
+                <h2>Javascript</h2>
+            </div>
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/512/518/518713.png" alt="">
+                <h2>Linux</h2>
+            </div>
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/512/4315/4315005.png" alt="">
+                <h2>SQL</h2>
+            </div>
+            <div>
+                <img src="https://img.freepik.com/free-icon/bug_318-466843.jpg?size=338&ext=jpg&ga=GA1.1.238311641.1678469731&semt=ais" alt="">
+                <h2>Debugging</h2>
+            </div>
+            <div>
+                <img src="https://img.freepik.com/free-icon/repair-tools_318-503493.jpg?size=338&ext=jpg&ga=GA1.2.238311641.1678469731&semt=ais" alt="">
+                <h2>Troubleshooting</h2>
+            </div>
+            <div>
+                <img src="https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png" alt="">
+                <h2>Reval Js</h2>
+            </div>
+           
+            
         </div>
-        <!-- <div>
-    <img src="https://cdn-icons-png.flaticon.com/512/889/889192.png" alt="">
-    <a href="https://github.com/Sunny7079?tab=repositories">Github / Rajdeep kumar</a>
-</div> -->
+        
+    </section>
+    <section id="skills">
+        <h1> Soft Skills</h1>
         <div>
-            <img src="https://cdn-icons-png.flaticon.com/512/270/270804.png" alt="">
-            <div> <a href="https://www.instagram.com/itssunny_1119/" target="_blank">Instagram / Rajdeep Kumar (sunny
-                    sahu)</a>
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/512/4825/4825697.png" alt="">
+                <h2>TEAM WORK</h2>
             </div>
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/512/3628/3628005.png" alt="">
+                <h2>ACTIVE LISTENER</h2>
+            </div>
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/512/1457/1457348.png" alt="">
+                <h2>PROBLEM SOLVER</h2>
+            </div>
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/128/9360/9360620.png" alt="">
+                <h2>CREATIVE THINKING</h2>
+            </div>
+            
         </div>
+    </section>
+    <section id="skills">
+        <h1>Soft Skills</h1>
+        <div>
+            <div>
+                <h2>Leadership</h2>
+            </div>
+            <div>
+                <h2>Creative Thinking</h2>
+            </div>
+            <div>
+                <h2>Time Management</h2>
+            </div>
+            <div>
+                <h2>Decision Making</h2>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-------------------------------------------------- Projects Section --------------------------------->
+    <section id="projects">
+        <h1>Projects</h1>
+        <div>
+            <div>
+                <img src="https://www.siteprice.org/SiteThumbs/c/cronometer.com.webp" >
+                <h2>Cronometer Clone</h2>
+                <p style="margin-bottom: 40px;">Cronometer is a powerful health and fitness app that makes it easy to track your diet and exercise
+                    habits</p>
+                    <p style="margin-bottom: 40px;">Features :- Homepage |Support-page | Blogs | login,signup |Profile-page</p>
+                    <p style="margin-bottom: 40px;">Areas of Responsibility :- Homepage | Navbar | Footer </p>
+                <p><b>Tech Stacks:</b></p>
+                <p><i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-square-js"></i>
+                </p>
+                <button id="git1Button" >Github <i class="fa-brands fa-github"></i></button>
+                <button id="deploy1Button">Live <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            </div>
+            <div>
+                <img src="https://www.membroz.com/wp-content/uploads/2020/03/thumb_FitMeal-home-540x640.jpg">
+                <h2>Fitmeals Clone</h2>
+                <p style="margin-bottom: 40px;">
+                    Reach your weight, health and workout goals with deliciously healthy food. We have various diet plans
+                    customised to suit your specific health and weight
+                </p>
+                <p style="margin-bottom: 40px;">Features :- Homepage | Login | Products | About-us | Blogs | Cart | Payment</p>
+                <p style="margin-bottom: 40px;">Areas of Responsibility :- Homepage |navbar | footer</p>
+                <p><b>Tech Stacks:</b></p>
+                <p><i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-square-js"></i>
+                </p>
+                <button id="git2Button">Github <i class="fa-brands fa-github"></i></button>
+                <button id="deploy2Button">Live <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            </div>
+            <div>
+                <img src="https://cdn.sanity.io/images/599r6htc/localized/af419bc84e82edd0633601935c72120327ca17c1-2120x1000.gif?w=1060&h=500&q=75&fit=max&auto=format" alt="figma">
+                <h2>Figma Presentation</h2>
+                <p style="margin-bottom: 40px;">Figma is a collaborative web application for
+                    interface design, with additional offline features enabled by desktop applications for macOS and Windows</p>
+       
+               <p style="margin-bottom: 40px;">Areas of Responsibility :- Created Presentation within a span of 2 days</p>
+                    <p><b>Tech Stacks:</b></p>
+                <p>
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-square-js"></i>
+                </p>
+                <button id="git3Button"> My Github <i class="fa-brands fa-github"></i></button>
+                <button id="deploy3Button">Live <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            </div>
+             <div>
+              <img src="https://media.istockphoto.com/id/1304391204/photo/white-lightbox-with-text-coming-soon-on-pink-color-background-top-view.jpg?b=1&s=170667a&w=0&k=20&c=RfC7Nl_CQyoQcP594rSXbufJ3eO55TqzCrKl4wUioFI=" alt="">
+               <h2>New Projects Coming Soon</h2>
+               <p>To know more about my work feel free to utilise my contact section. So what are you waiting for , let's get connected.</p>
+            
+            </div> 
+        </div>
+    </section>
+
+    <!-- Contact Me -->
+    <section id="contact">
+        <h1>Contact</h1>
+        <div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-map"></i>
+                    <p>Jharkhand</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+91 7079913485</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>sunnysahu930496@gmail.com</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="socialMedia">
+        
+        <i class="fa-brands fa-linkedin" id="linkedin"></i>
+        <i class="fa-brands fa-github" id="github"></i>
     </div>
 </body>
-
 </html>
+<script src="index.js" ></script>
+<script>
+    GitHubCalendar(".calendar", "saraswatabhinandan29");
+
+    GitHubCalendar(".calendar", "saraswatabhinandan29", { responsive: true });
+</script>
