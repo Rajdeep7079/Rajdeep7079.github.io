@@ -1055,3 +1055,8 @@ section:nth-child(1){
 #contact{
   padding-bottom: 100px;
 }
+@media screen and (min-width:350px) and (max-width:800px){
+  #git3Button,#deploy3Button{
+    margin-bottom: 50px;
+  }
+}
