@@ -729,7 +729,7 @@ section:nth-child(1){
   }
 }
 
-@media screen and (min-width:320px) and (max-width:480px) {
+@media screen and (min-width:220px) and (max-width:480px) {
   section:nth-child(odd){
       padding: 30px 7px;
       margin-left: -7.5px;
