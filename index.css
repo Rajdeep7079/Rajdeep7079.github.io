@@ -1052,6 +1052,20 @@ section:nth-child(1){
       font-size: 20px;
   }
 }
+@media screen (min-width:200) and (max-width:319px) {
+    #skills{
+      padding-top: 110px;
+  }
+  #skills>h1{
+      text-align: center;
+      font-size: 25px;
+  }
+  #skills>div{
+      width: 75%; 
+      grid-template-columns: repeat(1,1fr);
+      gap: 30px;
+  }
+}
 #contact{
   padding-bottom: 100px;
 }
