@@ -113,7 +113,7 @@ html{
 }
 .wrapper{
   display: inline-flex;
-  margin-left: -5px;
+  margin-left: -20px;
 }
 .wrapper .dynamic-txt{
   margin-top: 1px;
