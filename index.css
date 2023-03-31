@@ -995,6 +995,7 @@ section:nth-child(1){
   #contact>h1{
       text-align: center;
       font-size: 25px;
+    padding-top:10px
   }
   #contact>div{
       width: 85%;
